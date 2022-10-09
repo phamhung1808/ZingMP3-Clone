@@ -1,0 +1,252 @@
+:root {
+    --line: #93267b;
+    --text-color: #fff;
+}
+
+//logo
+
+.logo {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 60%;
+    }
+
+    img:hover {
+        opacity: .7;
+        transition: .7s ease;
+    }
+}
+
+//Scroll
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 100%;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #840d6a;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #aa5597;
+}
+
+.list-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    //Menu-top
+    a {
+        width: 100%;
+        text-decoration: none;
+        text-align: left;
+
+        .menu-item {
+            color: #dadada;
+            padding: 5px;
+            font-weight: 500;
+
+            i {
+                font-size: 20px;
+                margin: 0 10px 0 45px;
+            }
+
+            span {
+                text-align: center;
+
+                .live {
+                    font-size: 12px;
+                    width: 40px;
+                    padding: 2px 5px;
+                    background: red;
+                    margin-left: 10px;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .menu-item:hover {
+            border-left: 3px solid #d820b0;
+            background-color: var(--line);
+            color: #3bffce;
+            transition: .5s ease-in-out;
+        }
+    }
+
+    .line {
+        width: 80%;
+        height: 1px;
+        margin: 10px 0;
+        box-shadow: 0 10px 30px black;
+        background-color: var(--line);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    //Menu-bot
+
+    .child-menu {
+        height: 190px;
+        text-align: left;
+        overflow: auto;
+        color: var(--text-color);
+
+        .menu-item {
+            color: #dadada;
+            padding: 5px;
+            font-weight: 500;
+            cursor: pointer;
+
+            i {
+                font-size: 20px;
+                margin: 10px 0;
+                margin: 0 10px 0 45px;
+            }
+
+            span {
+                text-align: center;
+            }
+
+        }
+
+        .menu-item:hover {
+            border-left: 3px solid #d820b0;
+            background-color: var(--line);
+            color: #20e3b2;
+            transition: .5s ease-in-out;
+        }
+
+        .QC {
+            width: 90%;
+            height: 120px;
+            border-radius: 8px;
+            background: linear-gradient(117deg, #5a4be7, #c86dd7 102%);
+            position: relative;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 7px;
+            text-align: center;
+
+            h5 {
+                color: #d6cfd4;
+            }
+
+            .upvip {
+                cursor: pointer;
+                background-color: yellow;
+                width: 70%;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 50px;
+                padding: 5px 0;
+                color: #000;
+                font-weight: bold;
+            }
+        }
+    }
+
+    //Addnewlist
+
+    .addplaylist {
+        width: 100%;
+        height: 54px;
+        position: absolute;
+        bottom: 0;
+        background: #860d6c;
+        border-top: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: var(--text-color);
+        cursor: pointer;
+
+        i {
+            font-size: 25px;
+        }
+    }
+
+    .addplaylist:active {
+        background: var(--line);
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .list-menu {
+        a {
+
+            .menu-item {
+                span {
+                    display: none;
+                }
+
+                i {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .child-menu {
+            height: 300px;
+
+            .menu-item {
+
+                span {
+                    display: none;
+                }
+
+                i {
+                    margin-left: 20px;
+                }
+
+            }
+
+            .QC {
+                display: none;
+            }
+        }
+
+        .addplaylist {
+            span {
+                display: none;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .list-menu {
+        a {
+
+            .menu-item {
+                i {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .child-menu {
+            height: 300px;
+
+            .menu-item {
+
+                i {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
